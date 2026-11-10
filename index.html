@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!--Keyboard accessibility-->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!--Header and Navigation-->
+    <header class="site-header">
+        <nav class="navigation" aria-label="Main navigation">
+
+            <a href="index.html" class="logo"></a>FASHION</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="lookbook.html">Lookbook</a></li>
+            </ul>
+
+            <a href="catalogue.html" class="shop-button">Shop Now</a>
+
+            
+        </nav>
+    </header>
+
+    <!--Main content-->
+    <main id="main-content">
+
+        <!--Hero Section-->
+        <section class="hero">
+
+            <div class="hero-content">
+                <h1>Let's Explore Unique Clothes.</h1>
+                <p>
+                    Live for influential and innovative fashion!
+                    Discover styles that express who you are.
+                </p>
+                <a href="catalogue.html" class="button">Shop Now</a>
+            </div>
+
+
+            <div class="hero-image">
+                <img
+                    src="images/hero.png"
+                    srcset="images/hero-small.png 480w,
+                            images/hero.png 612w"
+                    sizes="(max-width: 760px) 100vw, 50vw"
+                    alt="Fashion model wearing a pink jacket">
+            </div>
+        </section>
+
+        <!-- Featured Brands-->
+        <section class="brands">
+            <h2 class="visually-hidden">Featured Brands</h2>
+
+            <div class="brands-list">
+               <span class="brand-logo">H&M</span>
+                <span class="brand-logo obey">OBEY.</span>
+                <span class="brand-logo shopify">shopify</span>
+                <span class="brand-logo lacoste">LACOSTE</span>
+                <span class="brand-logo levis">Levi's</span>
+                <span class="brand-logo amazon">amazon</span>
+            </div>
+        </section>
+
+        <!--New Arrivals-->
+        <section class="new-arrivals">
+            <h2>New Arrivals</h2>
+
+            <div class="product-grid">
+                <!-- Product 1: Hoodie -->
+                <article class="product-card">
+                    <a href="catalogue.html" class="product-image">
+                        <img
+                            src="images/hoodie.jpg"
+                            srcset="images/hoodie-small.jpg 480w,
+                                    images/hoodie.jpg 996w"
+                            sizes="(max-width: 759px) 45vw, 28vw"
+                            alt="Orange oversized hoodie">
+                    </a>
+
+                    <div class="product-info">
+                        <h3>Oversized Hoodie</h3>
+                        <p>Casual Collection</p>
+                        <span class="product-price">$49.99</span>
+                    </div>
+                </article>
+
+                <!-- Product 2: Coat -->
+                <article class="product-card">
+                    <a href="catalogue.html" class="product-image">
+                        <img
+                            src="images/coat.jpg"
+                            srcset="images/coat-small.jpg 480w,
+                                    images/coat.jpg 996w"
+                            sizes="(max-width: 759px) 45vw, 28vw"
+                            alt="Stylish women's coat">
+                    </a>
+
+                    <div class="product-info">
+                        <h3>Classic Winter Coat</h3>
+                        <p>New Season Collection</p>
+                        <span class="product-price">$89.99</span>
+                    </div>
+                </article>
+
+                <!-- Product 3: T-shirt -->
+                <article class="product-card">
+                    <a href="catalogue.html" class="product-image">
+                        <img
+                            src="images/tshirt.jpg"
+                            srcset="images/tshirt-small.jpg 480w,
+                                    images/tshirt.jpg 996w"
+                            sizes="(max-width: 759px) 45vw, 28vw"
+                            alt="White casual women's T-shirt">
+                    </a>
+
+                    <div class="product-info">
+                        <h3>Essential White Tee</h3>
+                        <p>Everyday Collection</p>
+                        <span class="product-price">$29.99</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!--Payday Sale-->
+        <section class="sale">
+
+            <div class="sale-image">
+               <img
+                    src="images/sale.jpg"
+                    srcset="images/sale-small.jpg 480w,
+                            images/sale.jpg 612w"
+                    sizes="(max-width: 760px) 100vw, 50vw"
+                    alt="Model wearing yellow outfit">
+            </div>
+
+            <div class="sale-content">
+                <h2>PAYDAY SALE</h2>
+                <p>Enjoy exclusive offers on selected items!</p>
+                <a href="catalogue.html" class="button">SHOP NOW</a>
+            </div>
+        </section>
+
+        <!--Young's Favourites-->
+        <section class="favourites">
+            <h2>YOUNG'S FAVOURITES</h2>
+
+            <div class="favourite-grid">
+                <!-- Favourite outfit 1 -->
+                <article class="favourite-card">
+
+                    <a href="lookbook.html" class="favourite-image">
+                        <img
+                            src="images/favourite1.jpg"
+                            srcset="images/favourite1-small.jpg 480w,
+                                    images/favourite1.jpg 1200w"
+                            sizes="(max-width: 760px) 90vw, 45vw"
+                            alt="Two friends wearing fashionable casual outfits">
+                    </a>
+
+                    <div class="favourite-info">
+                        <h3>Trending on Instagram</h3>
+                        <a href="lookbook.html">Explore Now! →</a>
+                    </div>
+
+                </article>
+
+                <!-- Favourite outfit 2 -->
+                <article class="favourite-card">
+
+                    <a href="lookbook.html" class="favourite-image">
+                        <img
+                            src="images/favourite2.jpg"
+                            srcset="images/favourite2-small.jpg 480w,
+                                    images/favourite2.jpg 1200w"
+                            sizes="(max-width: 760px) 90vw, 45vw"
+                            alt="Woman wearing a casual white top and denim shorts">
+                    </a>
+
+                    <div class="favourite-info">
+                        <h3>All Under $40</h3>
+                        <a href="catalogue.html">Explore Now! →</a>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+        
+        <!-- Newsletter subscription -->
+        <section class="newsletter">
+
+            <h2>JOIN OUR SHOPPING COMMUNITY</h2>
+
+            <p>
+                Subscribe to our newsletter and receive exclusive
+                promotions, updates and fashion inspiration.
+            </p>
+
+            <form class="newsletter-form" action="#" method="get">
+                <label for="newsletter-email" class="visually-hidden">
+                    Email address
+                </label>
+
+             <input
+                    type="email"
+                    id="newsletter-email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required>
+
+                <button type="submit">SEND</button>
+            </form>
+
+        </section>
+
+    </main>
+    <!--Footer-->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+            <p>Express yourself through fashion.</p>
+
+            <nav aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="lookbook.html">Lookbook</a>
+            </nav>
+
+            <p class="copyright">
+                &copy; 2026 Fashion. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

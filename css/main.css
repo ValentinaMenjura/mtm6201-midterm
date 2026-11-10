@@ -1,0 +1,1079 @@
+
+/* =========================================
+   1. GENERAL STYLES
+   ========================================= */
+
+:root {
+    --yellow: #EBD96B;
+    --light-grey: #F4F6F5;
+    --black: #000000;
+    --white: #FFFFFF;
+    --text-grey: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 50px 5%;
+}
+
+/* Accessibility */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: var(--black);
+    color: var(--white);
+    padding: 10px 15px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================================
+   2. HEADER AND NAVIGATION
+   ========================================= */
+
+.site-header {
+    background-color: var(--white);
+    padding: 20px 5%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #A18B20;
+}
+
+.shop-button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #444444;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   3. BUTTONS
+   ========================================= */
+
+.button {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 13px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #444444;
+    transform: translateY(-3px);
+}
+
+a:focus-visible {
+    outline: 3px solid #8A7200;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+
+.hero {
+    background-color: var(--light-grey);
+    border-radius: 20px;
+    margin: 10px 5% 40px;
+    padding: 35px 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    overflow: hidden;
+    animation: heroReveal 0.9s ease-out both;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 8vw, 55px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: var(--text-grey);
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   5. FEATURED BRANDS
+   ========================================= */
+
+.brands {
+    background-color: var(--yellow);
+    padding: 30px 5%;
+}
+
+.brand-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.brand-logo {
+    font-size: 19px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.brand-logo:first-child {
+    color: #E31837;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.obey {
+    font-style: italic;
+}
+
+.shopify {
+    color: #507B35;
+    font-style: italic;
+}
+
+.lacoste {
+    font-size: 15px;
+}
+
+.levis {
+    color: #D71920;
+    background-color: #F5E8A0;
+    padding: 3px 8px;
+}
+
+.amazon {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+/* =========================================
+   6. NEW ARRIVALS
+   ========================================= */
+
+.new-arrivals h2,
+.favourites h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+/* =========================================
+   7. PRODUCT GRID
+   ========================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 15px;
+}
+
+.product-card {
+    min-width: 0;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* All product image containers have equal dimensions */
+.product-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: var(--light-grey);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Images fill the containers without stretching */
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-info {
+    padding-top: 12px;
+}
+
+.product-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-info p {
+    font-size: 12px;
+    color: var(--text-grey);
+    margin: 4px 0;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =========================================
+   8. SALE SECTION
+   ========================================= */
+
+.sale {
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.sale-image {
+    width: 100%;
+}
+
+.sale-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sale-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.sale-content p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* =========================================
+   9. YOUNG'S FAVOURITES
+   ========================================= */
+
+.favourite-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.favourite-card {
+    min-width: 0;
+}
+
+.favourite-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.favourite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.favourite-image:hover img {
+    transform: scale(1.05);
+}
+
+.favourite-info {
+    padding-top: 12px;
+}
+
+.favourite-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.favourite-info a {
+    font-size: 13px;
+    color: var(--text-grey);
+    transition: color 0.3s ease;
+}
+
+.favourite-info a:hover {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+
+.site-footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 45px 5%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-content nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content nav a {
+    font-size: 13px;
+}
+
+.copyright {
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+/* =========================================
+   11. ANIMATIONS
+   ========================================= */
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Floating hero image animation */
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply floating animation to hero images */
+.hero-image img,
+.lookbook-hero-image img {
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Disable floating for reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero-image img,
+    .lookbook-hero-image img {
+        animation: none;
+    }
+}
+
+
+/* =========================================
+   12. TABLET AND DESKTOP
+   ========================================= */
+
+@media (min-width: 760px) {
+
+    .site-header {
+        padding: 25px 5%;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 30px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px 6%;
+        min-height: 480px;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 5vw, 65px);
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+    .hero-image img {
+        max-width: 500px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .product-info h3 {
+        font-size: 17px;
+    }
+
+    .sale {
+        flex-direction: row;
+        text-align: left;
+        padding: 50px 10%;
+    }
+
+    .sale-image,
+    .sale-content {
+        flex: 1;
+    }
+
+    .sale-content h2 {
+        font-size: 45px;
+    }
+
+    .favourite-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/* =========================================
+   13. NEWSLETTER
+   ========================================= */
+
+.newsletter {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 45px 5%;
+}
+
+.newsletter h2 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.newsletter p {
+    font-size: 13px;
+    max-width: 500px;
+    margin: 12px auto 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #444;
+}
+
+@media (min-width: 760px) {
+    .newsletter-form {
+        flex-direction: row;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+
+/* =========================================
+   14. CATALOGUE INTRODUCTION
+   ========================================= */
+
+.catalogue-intro {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 65px 6%;
+}
+
+.catalogue-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.catalogue-intro h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.catalogue-intro > p:last-child {
+    max-width: 550px;
+    margin: 15px auto 0;
+    font-size: 14px;
+}
+
+/* =========================================
+   15. CATALOGUE PRODUCTS
+   ========================================= */
+
+.catalogue-products {
+    padding: 55px 5%;
+}
+
+.catalogue-products h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* Category navigation */
+
+.category-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.category-links a {
+    border: 1px solid #CCCCCC;
+    border-radius: 25px;
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.category-links a:hover,
+.category-links a:focus-visible {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Product grid */
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 15px;
+}
+
+.catalogue-card {
+    min-width: 0;
+    transition: transform 0.3s ease;
+}
+
+.catalogue-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product images */
+
+.catalogue-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--light-grey);
+}
+
+.catalogue-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.catalogue-card:hover .catalogue-image img {
+    transform: scale(1.04);
+}
+
+/* Product labels */
+
+.product-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.sale-tag {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Product information */
+
+.catalogue-info {
+    padding-top: 12px;
+}
+
+.catalogue-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.catalogue-info p {
+    font-size: 12px;
+    color: var(--text-grey);
+    margin: 4px 0;
+}
+
+/* =========================================
+   16. CATALOGUE PROMOTION
+   ========================================= */
+
+.catalogue-promo {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 55px 5%;
+}
+
+.catalogue-promo h2 {
+    font-size: clamp(25px, 5vw, 40px);
+    font-weight: 800;
+}
+
+.catalogue-promo p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   17. CATALOGUE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (min-width: 760px) {
+
+    .catalogue-intro {
+        padding: 90px 10%;
+    }
+
+    .catalogue-products {
+        padding: 70px 7%;
+    }
+
+    .catalogue-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 30px;
+    }
+
+    .catalogue-info h3 {
+        font-size: 17px;
+    }
+
+    .category-links {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================
+   18. LOOKBOOK HERO
+   ========================================= */
+
+.lookbook-hero {
+    background-color: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 5% 40px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.lookbook-hero-content {
+    width: 100%;
+}
+
+.lookbook-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #806A13;
+    margin-bottom: 12px;
+}
+
+.lookbook-hero h1 {
+    font-size: clamp(38px, 8vw, 65px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.lookbook-hero-content > p:not(.lookbook-label) {
+    font-size: 14px;
+    color: var(--text-grey);
+    margin-top: 15px;
+    max-width: 450px;
+}
+
+.lookbook-hero-image {
+    width: 100%;
+}
+
+.lookbook-hero-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =========================================
+   19. LOOKBOOK HEADINGS
+   ========================================= */
+
+.lookbook-heading {
+    margin-bottom: 30px;
+}
+
+.lookbook-heading h2 {
+    font-size: clamp(25px, 5vw, 36px);
+    font-weight: 800;
+}
+
+.lookbook-heading > p:last-child {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* =========================================
+   20. TRENDING LOOKS
+   ========================================= */
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.look-card {
+    min-width: 0;
+}
+
+.look-image {
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 3 / 2;
+}
+
+.look-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.look-card:hover .look-image img {
+    transform: scale(1.05);
+}
+
+.look-info {
+    padding-top: 15px;
+}
+
+.look-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.look-info p {
+    font-size: 13px;
+    color: var(--text-grey);
+    margin: 5px 0 12px;
+}
+
+.look-info a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================
+   21. TRENDING PIECES
+   ========================================= */
+
+.trending-pieces {
+    background-color: var(--light-grey);
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 15px;
+}
+
+.trending-card {
+    min-width: 0;
+}
+
+.trending-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.trending-card:hover img {
+    transform: translateY(-5px);
+}
+
+.trending-card h3 {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.trending-card p {
+    font-size: 12px;
+    color: var(--text-grey);
+}
+
+.lookbook-shop {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* =========================================
+   22. LOOKBOOK SALE
+   ========================================= */
+
+.lookbook-sale {
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.lookbook-sale h2 {
+    font-size: clamp(30px, 7vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.lookbook-sale p:not(.lookbook-label) {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.lookbook-sale img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   23. LOOKBOOK RESPONSIVE DESIGN
+   ========================================= */
+
+@media (min-width: 760px) {
+
+    .lookbook-hero {
+        flex-direction: row;
+        padding: 50px 6%;
+        min-height: 450px;
+    }
+
+    .lookbook-hero-content,
+    .lookbook-hero-image {
+        flex: 1;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .trending-card h3 {
+        font-size: 17px;
+    }
+
+    .lookbook-sale {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px 10%;
+    }
+
+    .lookbook-sale > div,
+    .lookbook-sale > img {
+        flex: 1;
+    }
+}
